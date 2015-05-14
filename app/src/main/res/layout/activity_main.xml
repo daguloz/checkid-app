@@ -4,24 +4,80 @@
     android:layout_height="match_parent"
     android:orientation="vertical" >
 
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal">
+
+        <TextView
+            android:id="@+id/tvNFCStatus"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:background="#FF0000"
+            android:textColor="#FFF"
+            android:textSize="20dp"
+            android:padding="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="5dp"
+            android:text="Sin NFC"
+            android:layout_weight="1" />
+
+        <TextView
+            android:id="@+id/tvIsConnected"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:background="#FF0000"
+            android:textColor="#FFF"
+            android:textSize="20dp"
+            android:padding="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="5dp"
+            android:text="No hay conexión"
+            android:layout_weight="1" />
+    </LinearLayout>
+
     <TextView
-        android:id="@+id/tvIsConnected"
+        android:id="@+id/tvReadId"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
-        android:background="#FF0000"
-        android:textColor="#FFF"
-        android:textSize="18dp"
-        android:layout_marginBottom="5dp"
-        android:text="No conectado" />
-
-    <EditText
-        android:id="@+id/etResponse"
-        android:layout_width="match_parent"
-        android:layout_height="fill_parent"
-        android:ems="10"
+        android:textSize="20dp"
+        android:padding="10dp"
         android:layout_marginTop="10dp"
-        android:inputType="textMultiLine" >\
-        <requestFocus />
-    </EditText>
+        android:layout_marginBottom="5dp"
+        android:text="ID:"/>
+
+    <Button
+        android:id="@+id/btnRegister"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Registrar"
+        android:layout_gravity="center_horizontal"
+        android:visibility="invisible" />
+
+    <TextView
+        android:id="@+id/tvResponse"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:textSize="20dp"
+        android:padding="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="5dp"
+        android:text=""/>
+
+    <TextView
+        android:id="@+id/tvResponseRaw"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:textSize="20dp"
+        android:padding="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="5dp"
+        android:text=""/>
+
 </LinearLayout>
